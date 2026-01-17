@@ -1,0 +1,205 @@
+# Site
+repository: ddongs/recruit # TODO: 본인 GitHub Pages 레포로 수정 (예: username/username.github.io)
+favicon: images/favicon.ico
+
+# Content configuration version
+version: 2
+
+# Personal info
+name: 안동현
+title: Frontend Engineer
+email: ax34554@gmail.com
+phone: 010-8300-7586
+website: https://dongre.dev/
+
+# Dark Mode (true/false/never)
+darkmode: never
+
+# Google Analytics and Tag Manager
+# Using more than one of these may cause issues with reporting
+# gtm: "GTM-0000000"
+# gtag: "UA-00000000-0"
+# google_analytics: "UA-00000000-0"
+
+# About Section
+about_title: 소개
+about_profile_image: images/profile.jpg
+about_content: |
+  개인의 성장이 팀의 성장이라고 믿으며, 혼자보단 함께를 중요시하는 프론트엔드 개발자 **안동현**입니다.
+
+  **AI를 적극 활용**해 팀 생산성을 높이되, 생성된 코드를 그대로 쓰지 않고 **팀의 개발 표준/아키텍처에 맞게 리팩토링하고 이해**하는 과정을 중요하게 생각합니다.
+
+  SI·스타트업·B2B 솔루션 환경에서 다양한 기술적 도전과 비즈니스 요구사항을 경험하며, 주어진 역할을 넘어 제품과 서비스 전반에 책임감을 갖고 **주도적으로 문제를 해결**해왔습니다.
+
+  최근에는 오픈소스, 그리고 Next.js 사이드 프로젝트에 관심이 많습니다.
+
+content:
+  - title: 기술스택
+    layout: text
+    content: |
+      - **Frontend (실무 핵심)**: React, TypeScript, tanstack/react-query, tanstack/router, Zustand
+      - **Frontend (경험/사이드)**:  Next.js, React Native
+      - **Styling/UI**: Tailwind CSS, shadcn/ui, styled-components
+      - **Tooling/Quality**: ESLint, Prettier, Husky, lint-staged, Storybook
+      - **Build/Docs/Automation**: VitePress, Puppeteer, Jenkins, GitHub Actions
+      - **Data/UI**: Ag Grid
+
+  - title: 실무 경력
+    layout: list
+    content:
+      - layout: left
+        title: 인젠트
+        sub_title: 프론트엔드 개발자 · EAI 솔루션 eCross
+        caption: 2024.08 ~ 재직중
+        quote: >
+          8인의 개발팀에서 레거시 한계를 극복하기 위한 차세대 UI 개편 및 v2 마이그레이션을 주도, 유지보수부터 팀 프로세스 개선까지 전반적으로 기여
+        description: |
+          - v2 마이그레이션 / UI 개편 주도 및 레거시 개선
+          - TypeScript 타입 재정의/중복 제거로 안정성·유지보수성 개선
+          - 에러 핸들링 레이어 분리 및 성능 최적화로 Lighthouse **50%+ 개선**
+          - VitePress+Puppeteer+Jenkins로 매뉴얼 자동화(작업시간 **평균 2일 -> 8시간 이내**)
+
+      - layout: left
+        title: 넘버트랙
+        sub_title: 프론트엔드 개발자 · OKCEO Web
+        caption: 2024.02 ~ 2024.07
+        quote: >
+          3인의 개발팀에서 개발 생산성과 사용자 경험을 동시에 개선하는 데 집중하며 UI/UX 개선 및 배포 자동화에 기여
+        description: |
+          - Tailwind CSS + shadcn/ui 기반 반응형 디자인 시스템 전환
+          - GitHub Actions 기반 CI/CD 구축으로 배포 자동화
+          - Zustand + tanstack/react-query로 상태 관리 개선 및 TypeScript 점진 도입
+          - OKCEO APP 근로계약서 생성 기능 구현 경험 (React Native)
+
+      - layout: left
+        title: 라디코
+        sub_title: 프론트엔드 개발자 · OKCEO FIIN
+        caption: 2023.09 ~ 2024.01
+        quote: >
+          신입 첫 프로젝트로 설문 기반 대출 심사 시뮬레이션 서비스 화면을 구현
+        description: |
+          - React Hook Form + yup으로 복잡한 설문 폼 상태/검증 구현
+          - 공인인증서 로그인, Polling 기반 데이터 수집
+          - 심사 결과 PDF 뷰잉/다운로드 구현
+
+  - title: 문제 해결 과정
+    layout: list
+    content:
+      - layout: left
+        title: 인젠트 · eCross
+        sub_title: 품질/생산성 · 자동화 · 에러/성능 최적화
+        caption: 2024.08 ~ 재직중
+        description: |
+          **코드 품질 및 생산성 향상**
+          - 문제: 중복 코드 + `any` 남용으로 런타임 버그 및 생산성 저하
+          - 개선: 서버 Response 데이터 interface 재정의, TS 유틸리티 타입으로 중복 타입 제거
+          - 성과: 배포 환경 버그 감소 및 유지보수성 개선
+
+          **모달 관리 체계화** 
+          - 문제: 모달 제어 로직이 컴포넌트별로 분산되어 불필요한 로컬 상태/무분별한 `useEffect` 훅의 증가
+          - 개선: Toss overlay-kit 도입으로 모달 로직 표준화
+          - 성과: 중복 모달 로직 감소
+
+          **제품 매뉴얼 시스템 자동화**
+          - 문제: Word 기반 매뉴얼의 버전 관리 어려움, 수동 최신화로 시간 소요 및 포맷 유지 한계
+          - 개선: VitePress 기반 매뉴얼 시스템 구축, Puppeteer PDF 자동 생성, Jenkins 배포 파이프라인 구축
+          - 성과: 매뉴얼 작업 시간 **평균 2일 -> 8시간 이내** 단축 및 기술 공유 세션 진행, 전사 도입으로 확산
+
+          **클라이언트 에러 핸들링 개선**
+          - 문제: 네트워크 에러와 비즈니스 로직 에러가 혼용되어 일관된 처리 어려움
+          - 개선: Axios Interceptor + tanstack/react-query QueryCache/MutationCache + 커스텀 QueryError로 레이어 분리
+          - 성과: 에러 유형별 표준 처리 체계 확립 및 응답 관리 일관성 확보
+
+          **성능 최적화**
+          - 문제: 매우 큰 번들 사이즈로 초기 FCP/LCP 지연 및 다중 탭 소켓 통신으로 인한 모니터링 서버 부하 증가
+          - 개선: env 분리, 코드 스플리팅/청크 최적화, Tailwind CSS 전환, 불필요 리렌더링 최소화, Shared Worker 도입
+          - 성과: Lighthouse FCP/LCP/CLS 50%+ 개선, 다중 탭 소켓 통신 중앙화로 서버 부하 감소
+
+          **사용자 경험 개선**
+          - 문제: 잦은 Grid 컴포넌트의 리렌더링으로 인한 성능 저하 및 사용자 경험 저하
+          - 개선1: 레이아웃 전환/Resize 패널 공통 컴포넌트로 일관된 UI 인터랙션 제공
+          - 개선2: tui-grid(레거시) -> Ag Grid 도입(필터/정렬/검색) 및 이벤트 핸들러 기반 엑셀형 CRUD 구현
+          - 성과: 복잡 데이터 탐색 효율 및 사용자 경험 향상
+
+      - layout: left
+        title: 넘버트랙 · OKCEO Web
+        sub_title: 디자인 시스템 · 배포 자동화 · 상태 관리
+        caption: 2024.02 ~ 2024.07
+        description: |
+          **UI 및 스타일 시스템 개선**
+          - 문제: 데스크톱 중심/비일관 UI로 반복 작업 증가 및 용량 증가
+          - 개선: Tailwind CSS + shadcn/ui 기반 반응형 디자인 시스템 전환
+          - 성과: UI 재사용성 극대화 및 디바이스 전반의 일관된 사용자 경험 제공
+
+          **수동 배포 환경 자동화 전환**
+          - 문제: FTP 기반 수동 배포로 반복 작업 및 배포 오류 가능성
+          - 개선: GitHub Actions 기반 CI/CD 파이프라인 구축
+          - 성과: 빌드~배포 자동화로 개발 생산성 및 배포 안정성 향상
+
+          **상태 관리 방식 개선**
+          - 문제: 로컬 상태/Context 중첩으로 사이드이펙트 및 불필요 API 호출 증가
+          - 개선: Zustand + tanstack/react-query 도입으로 클라이언트/서버 상태 분리, TypeScript 점진 도입
+          - 성과: 유지보수성 및 개발 안정성 확보
+
+      - layout: left
+        title: 라디코 · OKCEO FIIN
+        sub_title: 설문/인증/데이터 수집/PDF 뷰 및 다운로드 (신입 첫 프로젝트)
+        caption: 2023.09 ~ 2024.01
+        description: |
+          - React Hook Form + yup으로 복잡한 설문 폼 상태 관리 및 유효성 검증 구현
+          - 공인인증서 로그인 구현
+          - Polling 기법으로 데이터 수집 기능 구현
+          - 심사 결과 PDF 뷰잉 및 다운로드 기능 구현
+
+  - title: 오픈소스 / 사이드 프로젝트
+    layout: list
+    content:
+      - layout: top-middle
+        title: react-table-mapping
+        icon: fas fa-package-tree
+        link: https://www.npmjs.com/package/react-table-mapping
+        quote: >
+          테이블 매핑 컴포넌트 오픈소스 패키지, 재사용 가능한 핵심 컴포넌트/훅/문서화/품질 체계를 함께 구축
+        description: |
+          **핵심 컴포넌트**
+          - TableMapping: 전체 매핑 인터페이스 통합
+          - SourceTable / TargetTable: 데이터 흐름 명확화
+          - MappingLines: SVG 기반 연결선 렌더링으로 직관적 UX 제공
+
+          **Custom Hook**
+          - useTableMapping: 상태/비즈니스 로직 분리, ref 기반 매핑 조작 메서드 제공
+
+          **코드 품질/자동화**
+          - ESLint/Prettier로 스타일·품질 자동 검사
+          - Husky + lint-staged로 커밋 전 자동 검증
+          - mapping 컴포넌트들의 e2e, api들의 unit test 구현
+            - Vitest, Playwright
+
+          **문서화**
+          - Storybook 기반 인터랙티브 문서 제공 및 시연 환경 구성
+
+  - title: 교육
+    layout: list
+    content:
+      - layout: left
+        title: 백석대학교
+        sub_title: 소프트웨어학과
+        caption: 2017.03 ~ 2023.02
+
+      - layout: left
+        title: 엘리스 SW트랙 수료
+        caption: 2023.03 ~ 2023.07
+
+# Footer
+footer_show_references: true
+# references_title: References on request (Override references text)
+
+# Build settings
+remote_theme: sproogen/modern-resume-theme
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+plugins:
+  - jekyll-seo-tag

@@ -1,5 +1,5 @@
 # Site
-repository: ddongs/recruit # TODO: 본인 GitHub Pages 레포로 수정 (예: username/username.github.io)
+repository: donghyun-git/resume
 favicon: images/favicon.ico
 
 # Content configuration version
@@ -82,74 +82,98 @@ content:
           - 공인인증서 로그인, Polling 기반 데이터 수집
           - 심사 결과 PDF 뷰잉/다운로드 구현
 
-  - title: 문제 해결 과정
+  - title: 인젠트 프로젝트 상세
     layout: list
     content:
       - layout: left
-        title: 인젠트 · eCross
-        sub_title: 품질/생산성 · 자동화 · 에러/성능 최적화
+        title: eCross v2 마이그레이션 / 차세대 UI 개편
         caption: 2024.08 ~ 재직중
         description: |
-          **코드 품질 및 생산성 향상**
-          - 문제: 중복 코드 + `any` 남용으로 런타임 버그 및 생산성 저하
-          - 개선: 서버 Response 데이터 interface 재정의, TS 유틸리티 타입으로 중복 타입 제거
-          - 성과: 배포 환경 버그 감소 및 유지보수성 개선
+          **프로젝트 개요**
+          - 레거시 한계를 극복하기 위한 차세대 UI 개편 및 v2 마이그레이션을 주도
 
-          **모달 관리 체계화** 
-          - 문제: 모달 제어 로직이 컴포넌트별로 분산되어 불필요한 로컬 상태/무분별한 `useEffect` 훅의 증가
-          - 개선: Toss overlay-kit 도입으로 모달 로직 표준화
-          - 성과: 중복 모달 로직 감소
+          **팀 구성 및 역할**
+          - 8인 개발팀 내 프론트엔드 개발
+          - 제품 유지보수부터 팀 프로세스 개선까지 전반적으로 기여
 
-          **제품 매뉴얼 시스템 자동화**
-          - 문제: Word 기반 매뉴얼의 버전 관리 어려움, 수동 최신화로 시간 소요 및 포맷 유지 한계
-          - 개선: VitePress 기반 매뉴얼 시스템 구축, Puppeteer PDF 자동 생성, Jenkins 배포 파이프라인 구축
-          - 성과: 매뉴얼 작업 시간 **평균 2일 -> 8시간 이내** 단축 및 기술 공유 세션 진행, 전사 도입으로 확산
+          **주요 업무**
+          - v2 마이그레이션 / UI 개편 주도 및 레거시 개선
 
-          **클라이언트 에러 핸들링 개선**
-          - 문제: 네트워크 에러와 비즈니스 로직 에러가 혼용되어 일관된 처리 어려움
-          - 개선: Axios Interceptor + tanstack/react-query QueryCache/MutationCache + 커스텀 QueryError로 레이어 분리
-          - 성과: 에러 유형별 표준 처리 체계 확립 및 응답 관리 일관성 확보
+          **문제 해결 과정**
+          - **코드 품질 및 생산성 향상**
+            - 문제: 중복 코드 + `any` 남용으로 런타임 버그 및 생산성 저하
+            - 개선: 서버 Response interface 재정의, typescript 유틸리티 타입으로 중복 타입 제거
+          - **모달 관리 체계화**
+            - 문제: 모달 제어 로직이 분산되어 로컬 상태/무분별한 `useEffect`가 증가
+            - 개선: Toss overlay-kit 도입으로 모달 로직 표준화
+          - **클라이언트 에러 핸들링 개선**
+            - 문제: 네트워크 에러와 비즈니스 에러 혼용
+            - 개선: Axios Interceptor + tanstack/react-query(QueryCache/MutationCache) + 커스텀 QueryError로 레이어 분리
+          - **성능 최적화**
+            - 문제: 큰 번들로 FCP/LCP 지연, 다중 탭 소켓 통신으로 모니터링 서버 부하 증가
+            - 개선: env 분리, 코드 스플리팅/청크 최적화, Tailwind 전환, 리렌더링 최소화, Shared Worker 도입
+          - **제품 매뉴얼 시스템 자동화**
+            - 문제: Word 기반 매뉴얼의 버전 관리/최신화/포맷 유지 한계
+            - 개선: VitePress + Puppeteer(PDF 자동 생성) + Jenkins 배포 파이프라인 구축
 
-          **성능 최적화**
-          - 문제: 매우 큰 번들 사이즈로 초기 FCP/LCP 지연 및 다중 탭 소켓 통신으로 인한 모니터링 서버 부하 증가
-          - 개선: env 분리, 코드 스플리팅/청크 최적화, Tailwind CSS 전환, 불필요 리렌더링 최소화, Shared Worker 도입
-          - 성과: Lighthouse FCP/LCP/CLS 50%+ 개선, 다중 탭 소켓 통신 중앙화로 서버 부하 감소
+          **기여 성과**
+          - Lighthouse FCP/LCP/CLS **50%+ 개선**
+          - 매뉴얼 작업 시간 **평균 2일 → 8시간 이내** 단축, 기술 공유 세션 진행 후 전사 도입으로 확산
+          - 중복 모달 로직 감소 및 유지보수성 개선
+          - tui-grid(레거시) → Ag Grid 도입(필터/정렬/검색) 및 엑셀형 CRUD 구현으로 사용자 경험 향상
 
-          **사용자 경험 개선**
-          - 문제: 잦은 Grid 컴포넌트의 리렌더링으로 인한 성능 저하 및 사용자 경험 저하
-          - 개선1: 레이아웃 전환/Resize 패널 공통 컴포넌트로 일관된 UI 인터랙션 제공
-          - 개선2: tui-grid(레거시) -> Ag Grid 도입(필터/정렬/검색) 및 이벤트 핸들러 기반 엑셀형 CRUD 구현
-          - 성과: 복잡 데이터 탐색 효율 및 사용자 경험 향상
-
+  - title: 넘버트랙 프로젝트 상세
+    layout: list
+    content:
       - layout: left
-        title: 넘버트랙 · OKCEO Web
-        sub_title: 디자인 시스템 · 배포 자동화 · 상태 관리
+        title: OKCEO Web
         caption: 2024.02 ~ 2024.07
         description: |
-          **UI 및 스타일 시스템 개선**
-          - 문제: 데스크톱 중심/비일관 UI로 반복 작업 증가 및 용량 증가
-          - 개선: Tailwind CSS + shadcn/ui 기반 반응형 디자인 시스템 전환
-          - 성과: UI 재사용성 극대화 및 디바이스 전반의 일관된 사용자 경험 제공
+          **프로젝트 개요**
+          - 개발 생산성과 사용자 경험 개선에 집중하며 UI/UX 개선 및 배포 자동화에 기여
 
-          **수동 배포 환경 자동화 전환**
-          - 문제: FTP 기반 수동 배포로 반복 작업 및 배포 오류 가능성
-          - 개선: GitHub Actions 기반 CI/CD 파이프라인 구축
-          - 성과: 빌드~배포 자동화로 개발 생산성 및 배포 안정성 향상
+          **팀 구성 및 역할**
+          - 3인 개발팀 내 프론트엔드 개발
 
-          **상태 관리 방식 개선**
-          - 문제: 로컬 상태/Context 중첩으로 사이드이펙트 및 불필요 API 호출 증가
-          - 개선: Zustand + tanstack/react-query 도입으로 클라이언트/서버 상태 분리, TypeScript 점진 도입
-          - 성과: 유지보수성 및 개발 안정성 확보
+          **주요 업무**
+          - Tailwind CSS + shadcn/ui 기반 반응형 디자인 시스템 전환
+          - GitHub Actions 기반 CI/CD 구축으로 배포 자동화
+          - Zustand + tanstack/react-query로 상태 관리 개선 및 TypeScript 점진 도입
+          - (경험) React Native 기반 OKCEO APP 근로계약서 생성 기능 구현
 
+          **문제 해결 과정**
+          - **UI 및 스타일 시스템 개선**
+            - 문제: 데스크톱 중심/비일관 UI로 반복 작업 증가 및 용량 증가
+            - 개선: Tailwind CSS + shadcn/ui 기반 반응형 디자인 시스템 전환
+          - **수동 배포 환경 자동화 전환**
+            - 문제: FTP 수동 배포로 반복 작업 및 배포 오류 가능성
+            - 개선: GitHub Actions 기반 CI/CD 파이프라인 구축
+          - **상태 관리 방식 개선**
+            - 문제: 로컬 상태/Context 중첩으로 사이드이펙트 및 불필요 API 호출 증가
+            - 개선: Zustand + tanstack/react-query로 클라이언트/서버 상태 분리
+
+          **기여 성과**
+          - UI 재사용성 및 디바이스 전반의 일관된 UX 확보
+          - 배포 안정성/생산성 향상
+
+  - title: 라디코 프로젝트 상세
+    layout: list
+    content:
       - layout: left
-        title: 라디코 · OKCEO FIIN
-        sub_title: 설문/인증/데이터 수집/PDF 뷰 및 다운로드 (신입 첫 프로젝트)
+        title: OKCEO FIIN (설문 기반 기업 모의 대출 심사)
         caption: 2023.09 ~ 2024.01
         description: |
-          - React Hook Form + yup으로 복잡한 설문 폼 상태 관리 및 유효성 검증 구현
+          **프로젝트 개요**
+          - 신입 첫 프로젝트로 설문 기반 기업 모의 대출 심사 서비스 화면을 구현
+
+          **주요 업무**
+          - React Hook Form + yup으로 복잡한 설문 폼 상태/검증 구현
           - 공인인증서 로그인 구현
           - Polling 기법으로 데이터 수집 기능 구현
-          - 심사 결과 PDF 뷰잉 및 다운로드 기능 구현
+          - 심사 결과 PDF 뷰 및 다운로드 구현
+
+          **기여 성과**
+          - 첫 프로젝트 완주로 실무 개발 자신감 확보
 
   - title: 오픈소스 / 사이드 프로젝트
     layout: list

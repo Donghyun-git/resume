@@ -52,7 +52,7 @@ content:
         GitHub Actions · Jenkins
 
         **TEST**
-        Vitest · Playwright
+        Vitest · Playwright · Playwright MCP(Cursor 연동) · Storybook
 
   - title: 실무 경력
     layout: list
